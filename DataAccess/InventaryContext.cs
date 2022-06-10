@@ -20,7 +20,8 @@ namespace DataAccess
         {
             if (!options.IsConfigured)
             {
-                options.UseSqlServer("Server=JORGE-LAPTOP; Database=InventoryPlatzi; integrated security=true"); //Elimine el User y el password
+                //Aqui es donde debes colocar el nombre de tu servidor
+                options.UseSqlServer("Server=NombreDeTuServidor; Database=InventoryPlatzi; integrated security=true"); 
             }
         }
 
