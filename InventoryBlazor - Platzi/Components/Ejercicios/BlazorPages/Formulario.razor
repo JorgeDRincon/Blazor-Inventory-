@@ -1,0 +1,26 @@
+﻿<h1>Form!</h1>
+
+<input type="text" placeholder="Message" @bind-value="@message"/>
+<input type="text" placeholder="Text" @bind-value="@text"/>
+<input type="button" @onclick="TextUpdate"  value="Actualizar Valores"/> 
+
+<br />
+
+<p>@message</p>
+
+@code{
+
+    [Parameter]
+    public string Message { get; set; }
+
+    string message = "Un saludo";
+    string text = "";
+
+    protected override async Task OnInitializedAsync(){
+        message = Message;
+    }
+
+    public void TextUpdate(){
+        message = text;
+    }
+}
